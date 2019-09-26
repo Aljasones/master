@@ -24,8 +24,8 @@ public class Main {
         int silverCardBonus = 70;
         int goldCardBonus = 100;
 
-        int bonus;
         int amountMultipleOfThousand = amountCurrentOrder / thousandRubles;
+        int bonus;
 
         if (sum<blueCardLimit) {
             bonus = amountMultipleOfThousand * blueCardBonus;
