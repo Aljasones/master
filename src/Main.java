@@ -25,15 +25,16 @@ public class Main {
         int goldCardBonus = 100;
 
         int bonus;
+        int amountMultipleOfThousand = amountCurrentOrder / thousandRubles;
 
         if (sum<blueCardLimit) {
-            bonus = amountCurrentOrder / thousandRubles * blueCardBonus;
+            bonus = amountMultipleOfThousand * blueCardBonus;
         }
         else if (sum<silverCardLimit){
-            bonus = amountCurrentOrder / thousandRubles * silverCardBonus;
+            bonus = amountMultipleOfThousand * silverCardBonus;
         }
         else{
-            bonus = amountCurrentOrder / thousandRubles * goldCardBonus;
+            bonus = amountMultipleOfThousand * goldCardBonus;
         }
         System.out.println("The bonus for the current order is " + bonus + " points");
         scanner.close();
